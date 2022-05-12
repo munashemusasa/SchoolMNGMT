@@ -1,0 +1,458 @@
+
+
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AKKHOR | Students Details</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/fonts/flaticon.css">
+    <!-- Full Calender CSS -->
+    <link rel="stylesheet" href="/css/fullcalendar.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <!-- Data Table CSS -->
+    <link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Modernize js -->
+    <script src="/js/modernizr-3.6.0.min.js"></script>
+</head>
+
+ <style>
+    
+.errors {
+    background: #e79892;
+    padding: 5px;
+    margin-bottom: 10px;
+    min-width: 200px;
+    display: inline-block;
+    border: 1px solid #e74c3c;
+  }
+  
+  .errors ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .success {
+    background: #80cca0;
+    padding: 5px;
+    margin-bottom: 10px;
+    min-width: 200px;
+    display: inline-block;
+    border: 1px solid black;
+  }
+</style>
+
+
+
+
+<body>
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+    <div id="wrapper" class="wrapper bg-ash">
+         <!-- Header Menu Area Start Here -->
+        <div class="navbar navbar-expand-md header-menu-one bg-light">
+            <div class="nav-bar-header-one">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="/img/logoX.png" alt="logo">
+                    </a>
+                </div>
+                  <div class="toggle-button sidebar-toggle">
+                    <button type="button" class="item-link">
+                        <span class="btn-icon-wrap">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="d-md-none mobile-nav-bar">
+               <button class="navbar-toggler pulse-animation" type="button" data-toggle="collapse" data-target="#mobile-navbar" aria-expanded="false">
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <button type="button" class="navbar-toggler sidebar-toggle-mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="header-main-menu collapse navbar-collapse" id="mobile-navbar">
+                <ul class="navbar-nav">
+                    <li class="navbar-item header-search-bar">
+                        <div class="input-group stylish-input-group">
+                            <span class="input-group-addon">
+                                <button type="submit">
+                                    
+                                </button>
+                            </span>
+                          
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="navbar-item dropdown header-admin">
+                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            <div class="admin-title">
+                                <h5 class="item-title"></h5>
+                                <span>Records</span>
+                            </div>
+                            <div class="admin-img">
+                                <img src="/img/figure/admin.jpg" alt="Admin">
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="item-header">
+                                <h6 class="item-title"></h6>
+                            </div>
+                           
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- Header Menu Area End Here -->
+        <!-- Page Area Start Here -->
+        <div class="dashboard-page-one">
+            <!-- Sidebar Area Start Here -->
+           <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
+               <div class="mobile-sidebar-header d-md-none">
+                    <div class="header-logo">
+                        <a href="#"><img src="/img/logo1.png" alt="logo"></a>
+                    </div>
+               </div>
+                <div class="sidebar-menu-content">
+                      <ul class="nav nav-sidebar-menu sidebar-toggle-view">
+                       <li class="nav-item">
+                            <a href="/records/dash" class="nav-link"><i
+                                class="flaticon-dashboard"></i><span>Dashboard</span></a>
+                        </li>
+
+                       <li class="nav-item">
+                            <a href="/records/profile" class="nav-link"><i
+                                class="flaticon-user"></i><span>Profile</span></a>
+                        </li>
+
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
+                            <ul class="nav sub-group-menu">
+                               
+                           
+                                <li class="nav-item">
+                                    <a href="/records/addStudent" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Add Student</a>
+                                </li>
+
+                                   <li class="nav-item">
+                                    <a href="/records/addClass" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Add Class</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="/records/studentList" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>View Students</a>
+                                </li>
+
+                                  <li class="nav-item">
+                                    <a href="/records/import" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Import Students</a>
+                                </li>
+
+   <li class="nav-item">
+                                    <a href="/records/studentSub" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Sync Subjects</a>
+                                </li>
+
+                                
+                            </ul>
+                        </li>
+
+
+                         <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i
+                                    class="flaticon-multiple-users-silhouette"></i><span>Teachers</span></a>
+                            <ul class="nav sub-group-menu">
+                              
+                                <li class="nav-item">
+                                    <a href="/records/addTeacher" class="nav-link"><i class="fas fa-angle-right"></i>Add
+                                        Teacher</a>
+                                </li>
+
+                                         <li class="nav-item">
+                                    <a href="/records/importTeacher" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Import Teacher</a>
+                                </li>
+
+                                          <li class="nav-item">
+                                    <a href="/records/teacherList" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>View Teachers</a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+
+
+
+  <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i
+                                    class="flaticon-menu-1"></i><span>Departments</span></a>
+                            <ul class="nav sub-group-menu">
+                              
+                                <li class="nav-item">
+                                    <a href="/records/dept" class="nav-link"><i class="fas fa-angle-right"></i>Add
+                                        Department</a>
+                                </li>
+
+                                         <li class="nav-item">
+                                    <a href="/records/deptList" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>View Departments</a>
+                                </li>
+
+                                        
+                               
+                            </ul>
+                        </li>
+
+
+
+
+
+                          <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-open-book"></i><span>Subjects</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a href="/records/subject" class="nav-link"><i class="fas fa-angle-right"></i>Add Subjects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/records/subjectList" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>View Subjects</a>
+                                </li>
+
+                                 <li class="nav-item">
+                                    <a href="/records/teacherSubject" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Allocate Subjects</a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+                    
+
+
+                         <li class="nav-item">
+                            <a href="/records/feesUpdate" class="nav-link"><i class="flaticon-calendar"></i><span>New Term Update</span></a>
+                        </li>
+                     
+                      <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-technological"></i><span>Class Routine</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a href="/records/lesson" class="nav-link"><i class="fas fa-angle-right"></i>Add Lesson</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/records/timetable" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Timetable</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="/records/addRoom" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Add ClassRoom</a>
+                                </li>
+
+                                 <li class="nav-item">
+                                    <a href="/records/roomList" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>View Classrooms</a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+                    
+ 
+                     
+                     
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-shopping-list"></i><span>Exam</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a href="/records/examSchedule" class="nav-link"><i class="fas fa-angle-right"></i>Add Exam</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="/records/examList" class="nav-link"><i class="fas fa-angle-right"></i>Exam Timetable</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/records/examGrade" class="nav-link"><i class="fas fa-angle-right"></i>Exam
+                                        Grades</a>
+                                </li>
+
+                                 <li class="nav-item">
+                                    <a href="/records/gradeList" class="nav-link"><i class="fas fa-angle-right"></i>View Exam
+                                        Grades</a>
+                                </li>
+                            </ul>
+                        </li>
+   
+                                    
+                         <li class="nav-item">
+                            <a href="/pass" class="nav-link"><i class="flaticon-settings"></i><span>Change Password</span></a>
+                        </li>
+
+                         <li class="nav-item sidebar-nav-item">
+                          
+                              <li class="nav-item">
+                            <a href="/logout" class="nav-link"><i class="flaticon-dashboard"></i><span>Logout</span></a>
+                        </li>
+                        </li>
+                      
+                    </ul>
+                </div>
+            </div>
+            <!-- Sidebar Area End Here -->
+            <div class="dashboard-content-one">
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                
+                    <ul>
+                        
+                    </ul>
+                </div>
+                <!-- Breadcubs Area End Here -->
+                <!-- Admit Form Area Start Here -->
+                <div class="card height-auto">
+                    <div class="card-body">
+                        <div class="heading-layout1">
+                            <div class="item-title">
+                                <h3>Add Subject</h3>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">...</a>
+
+                               
+                            </div>
+                        </div>
+
+
+
+
+                        	{{# if success }}
+    <section class="success">
+        <h2>Successful Validation!</h2>
+    </section>
+{{ else }}
+    {{# if errors }}
+        <section class="errors">
+            <ul>
+                {{# each errors }}
+                    <li>{{ this.msg }}</li>
+                {{/each}}
+            </ul>
+        </section>
+
+        {{/if}}
+        {{#if message}}
+        <div  class="{{message.type}}">
+            <strong>{{message.intro}}</strong>{{message.message}}
+        </div>
+        {{/if}}
+               <form action="/records/subject" method="POST" autocomplete="off">
+          <div class="col-xl-4 col-lg-6 col-12 form-group">
+ 
+         <label for="nameOfClass" class="text-dark">Name Of Subject</label>
+        <input type="text" class="form-control" name="name" id="name"  value=""  >
+    
+    </div>
+
+
+  
+                                <div class="col-xl-4 col-lg-6 col-12 form-group">
+                                    <label>Grade/Form *</label>
+                                    <select class="select2" name="grade" id="grade">
+                                    
+                                        
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        
+                                    </select>
+                                </div>
+                           
+
+
+       <div class="col-xl-4 col-lg-6 col-12 form-group">
+ 
+         <label for="nameOfClass" class="text-dark">Subject Code</label>
+        <input type="text" class="form-control" name="code" id="code"  value=""  >
+    
+    </div>
+
+
+         <div class="col-xl-4 col-lg-6 col-12 form-group">
+                    
+      <label for="">Department</label>
+          <select  id="dept" name="dept" value="" class="form-control" aria-placeholder="Select Department">
+              {{#each arr1}}
+           <option value="{{this.name}}">{{this.name}}</option>
+              {{/each}}
+          </select>
+      </div>
+                                
+                       
+
+
+
+ <input type="submit" value="Submit"  class="btn btn-dark"> <!--class="btn btn-primary btn-block"-->  
+<a href="/records/subjectList"type="button" class="btn btn-dark" >View Subjects</a>
+        </form>   
+        {{/if}}
+         </div>
+                </div>
+      
+            </div>
+        </div>
+        <!-- Page Area End Here -->
+    </div>
+
+      
+    <!-- jquery-->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <!-- Plugins js -->
+    <script src="/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Select 2 Js -->
+    <script src="/js/select2.min.js"></script>
+    <!-- Date Picker Js -->
+    <script src="/js/datepicker.min.js"></script>
+    <!-- Smoothscroll Js -->
+    <script src="/js/jquery.smoothscroll.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="/js/jquery.scrollUp.min.js"></script>
+    <!-- Custom Js -->
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>

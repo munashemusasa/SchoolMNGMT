@@ -1,0 +1,375 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add Book Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="font/font/flaticon.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Normalize CSS -->
+     <link rel="stylesheet" type="text/css" href="/css2/styles.css" />
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/fonts/flaticon.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <!-- Select 2 CSS -->
+    <link rel="stylesheet" href="/css/select2.min.css">
+    <!-- Date Picker CSS -->
+    <link rel="stylesheet" href="/css/datepicker.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- Modernize js -->
+    <script src="/js/modernizr-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div id="preloader"></div>
+    <!-- Preloader End Here -->
+    <div id="wrapper" class="wrapper bg-ash">
+         <!-- Header Menu Area Start Here -->
+        <div class="navbar navbar-expand-md header-menu-one bg-light">
+            <div class="nav-bar-header-one">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="/img/logoX.png" alt="logo">
+                    </a>
+                </div>
+                  <div class="toggle-button sidebar-toggle">
+                    <button type="button" class="item-link">
+                        <span class="btn-icon-wrap">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="d-md-none mobile-nav-bar">
+               <button class="navbar-toggler pulse-animation" type="button" data-toggle="collapse" data-target="#mobile-navbar" aria-expanded="false">
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <button type="button" class="navbar-toggler sidebar-toggle-mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="header-main-menu collapse navbar-collapse" id="mobile-navbar">
+                <ul class="navbar-nav">
+                    <div>
+                       <span></span>
+                       </div>
+
+                     
+                   
+                    <li class="navbar-item header-search-bar">
+                        <div class="input-group stylish-input-group">
+                            <span class="input-group-addon">
+                                <button type="submit">
+                                    
+                                    <span  aria-hidden="true"></span>
+                                </button>
+                            
+                            </span>
+                            <!--<input type="text" class="form-control" placeholder="Book Collection Date : {{date}}">-->
+                          
+                      
+                       
+                        
+                        </div>
+                        
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="navbar-item dropdown header-admin">
+                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            <div class="admin-title">
+                                <h5 class="item-title">{{user.name}}</h5>
+                                <span>{{user.role}}</span>
+                            </div>
+                            <div class="admin-img">
+                                <img src="/img/figure/admin.jpg" alt="Admin">
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="item-header">
+                                <h6 class="item-title">{{user.name}}</h6>
+                            </div>
+                            <div class="item-content">
+                                <ul class="settings-list">
+                                    <li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
+                                 
+                                    <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
+                                    <li><a href="/logout"><i class="flaticon-turn-off"></i>Log Out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                  
+                </ul>
+            </div>
+        </div>
+        <!-- Header Menu Area End Here -->
+        <!-- Page Area Start Here -->
+        <div class="dashboard-page-one">
+            <!-- Sidebar Area Start Here -->
+           <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
+               <div class="mobile-sidebar-header d-md-none">
+                    <div class="header-logo">
+                        <a href="/teacher/passRate"><img src="/img/logoX.png" alt="logo"></a>
+                    </div>
+               </div>
+                                
+ <div class="sidebar-menu-content">
+                       <ul class="nav nav-sidebar-menu sidebar-toggle-view">
+                     <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a href="/teacher/passRate" class="nav-link"><i class="fas fa-angle-right"></i>Exams</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/teacher/dash2" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Class</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        </li>
+                      
+                        <li class="nav-item">
+                            <a href="/teacher/teacherDetails" class="nav-link"><i
+                                class="flaticon-user"></i><span>Profile</span></a>
+                        </li>
+
+                         <li class="nav-item">
+                            <a href="/teacher/subjects" class="nav-link"><i
+                                class="flaticon-open-book"></i><span>Subjects</span></a>
+                        </li>
+                        
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-shopping-list"></i><span>Exam</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a href="/teacher/examBatch" class="nav-link"><i class="fas fa-angle-right"></i>Exam Grades Batch</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="/teacher/gradeX" class="nav-link"><i class="fas fa-angle-right"></i>Add Student Grades</a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a href="/teacher/examList" class="nav-link"><i class="fas fa-angle-right"></i>Exam Timetable</a>
+                                </li>
+          
+                            </ul>
+                        </li>
+
+
+                      <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-list"></i><span>Student Results</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a href="/teacher/results" class="nav-link"><i class="fas fa-angle-right"></i>Class </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="/teacher/examResults" class="nav-link"><i class="fas fa-angle-right"></i>Exam </a>
+                                </li>
+                                
+          
+                            </ul>
+                        </li>
+
+
+
+                         <li class="nav-item">
+                            <a href="/teacher/timetable" class="nav-link"><i class="flaticon-technological"></i><span>Timetable</span></a>
+                        </li>
+                     
+                      <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-list"></i><span>Reports</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a href="/teacher/fstats" class="nav-link"><i class="fas fa-angle-right"></i>Exam Stats</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="/teacher/tstats" class="nav-link"><i class="fas fa-angle-right"></i>Class Stats</a>
+                                </li>
+                                
+          
+                            </ul>
+                        </li>
+                    
+                    
+                       <li class="nav-item">
+                            <a href="/pass" class="nav-link"><i class="flaticon-settings"></i><span>Change Password</span></a>
+                        </li>
+                     
+                     
+                        <li class="nav-item sidebar-nav-item">
+                          
+                              <li class="nav-item">
+                            <a href="/logout" class="nav-link"><i class="flaticon-dashboard"></i><span>Logout</span></a>
+                        </li>
+                        </li>
+                      
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar Area End Here -->
+
+            <!-- Sidebar Area End Here -->
+            <div class="dashboard-content-one">
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                   
+                </div>
+
+                   <div class="card height-auto">
+                    <div class="card-body">
+                        <div class="heading-layout1">
+                            <div class="item-title">
+                                
+                            </div>
+                         <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">...</a>
+
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">
+                                            
+                                    <a class="dropdown-item" href="#">
+                                           
+                                    <a class="dropdown-item" href="#">
+                                       
+                                </div>
+                            </div>
+                            </div>
+                   
+                     
+                <!-- Breadcubs Area End Here -->
+                <!-- Add New Book Area Start Here -->
+                 
+
+<div class="row gutters-20">
+                    <div class="col-xl-4 col-sm-6 col-12">
+                        <div class="dashboard-summery-one mg-b-20">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="item-icon bg-light-green ">
+                                         <i class="flaticon-open-book"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="item-content">
+                                        <div class="item-title">Subjects</div>
+                                        <div class="item-number"><span class="counter" data-num="{{sub}}">{{sub}}</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6 col-12">
+                        <div class="dashboard-summery-one mg-b-20">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="item-icon bg-light-blue">
+                                        <i class="flaticon-multiple-users-silhouette text-blue"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="item-content">
+                                        <div class="item-title">Classes</div>
+                                        <div class="item-number"><span class="counter"data-num="{{sub}}" >{{sub}}</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6 col-12">
+                        <div class="dashboard-summery-one mg-b-20">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="item-icon bg-light-yellow">
+                                        <i class="flaticon-couple text-orange"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="item-content">
+                                        <div class="item-title">Dept</div>
+                                        <div class="item-number"><span >{{dept}}</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+</div>
+   
+
+  
+
+   
+    <div class="container">
+        <div class="row">
+            <div class="col-6 chart">
+                <canvas id="myChart" width="500" height="400"></canvas>
+            </div>
+            <div class="col-6 chart">
+                <canvas id="myChart2" width="500" height="400"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 chart">
+                <canvas id="myChart3" width="500" height="400"></canvas>
+            </div>
+            <div class="col-6 chart">
+                <canvas id="myChart4" width="500" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+
+
+  
+      <!-- jquery-->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <!-- Plugins js -->
+    <script src="/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Select 2 Js -->
+    <script src="/js/select2.min.js"></script>
+    <!-- Date Picker Js -->
+    <script src="/js/datepicker.min.js"></script>
+    <!-- Smoothscroll Js -->
+    <script src="/js/jquery.smoothscroll.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="/js/jquery.scrollUp.min.js"></script>
+    <!-- Custom Js -->
+    <script src="/js/main.js"></script>
+
+     <script src="/test/script2.js"></script>

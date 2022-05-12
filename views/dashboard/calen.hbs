@@ -1,0 +1,184 @@
+<!--To-do List (Part 1)
+Adding Entries
+-change Event Listener
+-innerHtml +=
+-createElement and appendChild
+
+Part 2
+
+Deleting Entries
+
+-dbclick event
+-remove()
+-Material Icons
+-className
+-closures
+
+Part 3
+
+Done Marking
+-text-decoration: line-through;
+-JS technique : flag
+-JS classList API
+-HTML <input> checkbox
+-CSS : chcked
+-CSS ~ and +
+
+Part 4
+
+Category
+-getElementById
+-new row in table
+-classList.toggle()
+-<datalist>
+-->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material-Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter new to-do">
+    <p><input type="text" placeholder="Enter Category" list="categoryList"></p>
+     <datalist id="categoryList">
+     <option value="Personal"></option>
+     <option value="Work"></option>
+
+     </datalist>
+     <p><input type="date" id="dateInput"></p>
+     <p><input type="time" id="timeInput"></p>
+    <button id="addBtn">Add</button>
+    <p><button id="sortBtn">Sort</button></p>
+    <ul></ul>
+
+    <table id="todoTable">
+      <tr>
+
+    <td></td>
+    <td>Date</td>
+    <td>Time</td>
+    <td>to-do</td>
+    <td>
+<select  id="categoryFilter">
+
+
+
+</select>
+
+    </td>
+    <td></td>
+
+
+      </tr>
+    </table>
+
+     <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
+<div id="calendar"></div>
+
+</body>
+
+</html>
+
+
+
+<!--Part 5
+Filter by Category
+******** Note
+-<select>
+  -Element
+  -ES6 Array.from()
+  -ES6 Array.prototype.forEach()
+
+Part 6
+Auto Update options
+-Array push()
+-Array includes()
+-new Set()
+-for of loop
+-const
+
+
+
+Part 7
+local Storage
+-localStorage.setItems()
+-localStorage.getItem()
+-JSON.stringify()
+-JSON.parse()
+
+Part 8
+Object
+-object.key VS object["key"]
+-for in loop
+-array is object in JS
+-object destructuring
+
+
+Part 9
+Identifying Data
+-CheckboxElement.checked
+-JS Element.dataset
+-HTML data-key attribute
+-Array.prototype.splice(index,number)
+
+Part 10
+UUID
+-String.prototype.replace(RegExp, Callback)
+-Number.toSring(16)
+-Math.random()
+-Date.now() and perfomance.now()
+-randomUUID() (possible in future)
+
+
+Part 11
+
+Date and Time input
+
+- <input type="date">
+-<input type="time">
+-new Date()
+-dateObj.toLocaleString([locales[,options]])
+
+
+Part 12
+
+Sorting
+-Array sort()
+-Array sort(callback)
+-Data.parse()
+-UX design - autosave()?
+
+
+Part 13
+Problem Solving
+
+-Thanks Conrad Mollink for pointing out
+-shifted columns
+--td[4] instead of td[2]
+--querySelector(class)
+--looping over data
+-refrenced node lost
+--keep the first row
+--get element again
+
+
+
+-->

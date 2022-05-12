@@ -1,0 +1,448 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AKKHOR | Students Details</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/fonts/flaticon.css">
+    <!-- Full Calender CSS -->
+    <link rel="stylesheet" href="/css/fullcalendar.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <!-- Data Table CSS -->
+    <link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Modernize js -->
+    <script src="/js/modernizr-3.6.0.min.js"></script>
+</head>
+
+ <style>
+    
+.errors {
+    background: #e79892;
+    padding: 5px;
+    margin-bottom: 10px;
+    min-width: 200px;
+    display: inline-block;
+    border: 1px solid #e74c3c;
+  }
+  
+  .errors ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .success {
+    background: #80cca0;
+    padding: 5px;
+    margin-bottom: 10px;
+    min-width: 200px;
+    display: inline-block;
+    border: 1px solid black;
+  }
+
+
+
+.form-div { margin-top: 100px; border: 1px solid #e0e0e0; }
+/*#profileDisplay { display: block; height: 210px; width: 60%; margin: 0px auto; border-radius: 50%; }*/
+
+ #profileDisplay{
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: block;
+  }
+
+
+
+.img-placeholder {
+  width: 100%;
+  color: white;
+  height: 70%;
+  background: black;
+  opacity: .7;
+  height: 150px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.img-placeholder h4 {
+  margin-top: 40%;
+  color: white;
+}
+.img-div:hover .img-placeholder {
+  display: block;
+  cursor: pointer;
+}
+
+
+
+
+
+</style>
+
+<body>
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+    <div id="wrapper" class="wrapper bg-ash">
+         <!-- Header Menu Area Start Here -->
+        <div class="navbar navbar-expand-md header-menu-one bg-light">
+            <div class="nav-bar-header-one">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="/img/logoX.png" alt="logo">
+                    </a>
+                </div>
+                  <div class="toggle-button sidebar-toggle">
+                    <button type="button" class="item-link">
+                        <span class="btn-icon-wrap">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="d-md-none mobile-nav-bar">
+               <button class="navbar-toggler pulse-animation" type="button" data-toggle="collapse" data-target="#mobile-navbar" aria-expanded="false">
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <button type="button" class="navbar-toggler sidebar-toggle-mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+          
+            </div>
+        </div>
+        <!-- Header Menu Area End Here -->
+        <!-- Page Area Start Here -->
+        <div class="dashboard-page-one">
+            <!-- Sidebar Area Start Here -->
+           <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
+               <div class="mobile-sidebar-header d-md-none">
+                    <div class="header-logo">
+                        <a href="#"><img src="/img/logo1.png" alt="logo"></a>
+                    </div>
+               </div>
+                <div class="sidebar-menu-content">
+                     <ul class="nav nav-sidebar-menu sidebar-toggle-view">
+                        <li class="nav-item">
+                            <a href="/adminDashInc" class="nav-link"><i
+                                class="flaticon-dashboard"></i><span>Dashboard</span></a>
+                        </li>
+
+ <li class="nav-item">
+                            <a href="/profile" class="nav-link"><i
+                                class="flaticon-user"></i><span>Profile</span></a>
+                        </li>
+
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-multiple-users-silhouette"></i><span>Staff</span></a>
+                            <ul class="nav sub-group-menu">
+                               
+                           
+                              
+
+                                <li class="nav-item">
+                                    <a href="/addStaff" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Register Staff</a>
+                                </li>
+
+                               
+                                                           <li class="nav-item">
+                                    <a href="/staffList" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>View Staff</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+ 
+ <li class="nav-item">
+                            <a href="/studentList" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
+                        </li>
+                     
+
+
+
+
+                     
+                         <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i
+                                    class="flaticon-multiple-users-silhouette"></i><span>Teachers</span></a>
+                            <ul class="nav sub-group-menu">
+                              
+                                <li class="nav-item">
+                                    <a href="/teacherList" class="nav-link"><i class="fas fa-angle-right"></i>View Teachers</a>
+                                </li>
+
+                                         <li class="nav-item">
+                                    <a href="/tstats" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Exam Reports</a>
+                                </li>
+
+                                          <li class="nav-item">
+                                    <a href="/cstats" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Tests</a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+
+
+                     
+
+
+   <li class="nav-item">
+                            <a href="/deptList" class="nav-link"><i class="flaticon-menu-1"></i><span>Departments</span></a>
+                        </li>
+
+
+         <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-money"></i><span>Accounts</span></a>
+                            <ul class="nav sub-group-menu">
+                            
+
+                                <li class="nav-item">
+                                    <a href="/feesRecords" class="nav-link"><i class="fas fa-angle-right"></i>Fees Records</a>
+                                </li>
+                               
+
+                                 <li class="nav-item">
+                                    <a href="/expenseList" class="nav-link"><i class="fas fa-angle-right"></i>Expense Records
+                                        </a>
+                                </li>
+                            </ul>
+                        </li>
+                   
+    <li class="nav-item">
+                            <a href="/feesUpdate" class="nav-link"><i class="flaticon-calendar"></i><span>New Term Update</span></a>
+                        </li>
+                     
+                  <li class="nav-item">
+                            <a href="/timetable" class="nav-link"><i class="flaticon-technological"></i><span>Timetable</span></a>
+                        </li>
+                     
+                   
+ 
+                     
+                     
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-shopping-list"></i><span>Exam</span></a>
+                            <ul class="nav sub-group-menu">
+                             
+
+                                <li class="nav-item">
+                                    <a href="/examList" class="nav-link"><i class="fas fa-angle-right"></i>Exam Timetable</a>
+                                </li>
+                              
+
+                                 <li class="nav-item">
+                                    <a href="/gradeList" class="nav-link"><i class="fas fa-angle-right"></i>View Exam
+                                        Grades</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                
+
+   <li class="nav-item">
+                            <a href="/listX" class="nav-link"><i class="flaticon-list"></i><span>View Users</span></a>
+                        </li>
+                         
+                         <li class="nav-item">
+                            <a href="/pass" class="nav-link"><i class="flaticon-settings"></i><span>Change Password</span></a>
+                        </li>
+
+                         <li class="nav-item sidebar-nav-item">
+                          
+                              <li class="nav-item">
+                            <a href="/logout" class="nav-link"><i class="flaticon-dashboard"></i><span>Logout</span></a>
+                        </li>
+                        </li>
+                      
+                       
+                      
+                    </ul>
+                </div>
+            </div>
+            <!-- Sidebar Area End Here -->
+            <div class="dashboard-content-one">
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                    <h3>Admin</h3>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>Admin Details</li>
+                    </ul>
+                </div>
+                <!-- Breadcubs Area End Here -->
+                <!-- Student Details Area Start Here -->
+                <div class="card height-auto">
+                    <div class="card-body">
+                        <div class="heading-layout1">
+                            <div class="item-title">
+                                <h3>About Me</h3>
+                            </div>
+                           <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" 
+                                data-toggle="dropdown" aria-expanded="false">...</a>
+        
+                           
+                            </div>
+                        </div>
+                        <div class="single-info-details">
+                            <div class="item-img">
+                               <!-- <img src="/uploads/{{user.photo}}" alt="student">-->
+                                   	{{# if success }}
+    <section class="success">
+        <h2>Successful Validation!</h2>
+    </section>
+{{ else }}
+    {{# if errors }}
+        <section class="errors2">
+            <ul>
+                {{# each errors }}
+                    <li>{{ this.msg }}</li>
+                {{/each}}
+            </ul>
+        </section>
+
+        {{/if}}
+        {{#if message}}
+        <div  class="{{message.type}}">
+            <strong>{{message.intro}}</strong>{{message.message}}
+        </div>
+        {{/if}}
+   <!-- <img src="/img/{{bin.imagename}}" alt="" class="profile_image">-->
+	     <form action="/profile" method="POST" enctype="multipart/form-data">
+        <!--  <div class="custom-file mb-3">
+            <input type="file" name="file" id="file" class="custom-file-input">
+          <!--  <label for="file" class="custom-file-label"> </label>
+          </div>-->
+		       <div class="form-group " style="position: relative;" >
+            <span class="img-div">
+              <div class="text-center img-placeholder"  onClick="triggerClick()">
+                <h4>Update image</h4>
+              </div>
+              <img src="/uploads/{{user.photo}}" onClick="triggerClick()" id="profileDisplay">
+            </span>
+            <input type="file" name="file" onChange="displayImage(this)" id="profileImage" value="file" class="custom-file-input" style="display: none;">
+           
+          </div>
+		
+      
+         
+ <input type="submit" value="Update"  class="btn btn-dark">
+        </form>
+		{{/if}}
+                            </div>
+                            <div class="item-content">
+                                <div class="header-inline item-header">
+                                    
+                                    <div class="header-elements">
+                                        <ul>
+                                            <li><a href="#"><i class="far fa-edit"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-print"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-download"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-table table-responsive">
+                                    <table class="table text-nowrap">
+                                        <tbody>
+                                            <tr>
+                                                <td>Name:</td>
+                                                <td class="font-medium text-dark-medium" >{{user.fullname}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ID:</td>
+                                                <td class="font-medium text-dark-medium">{{user.uid}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gender:</td>
+                                                <td class="font-medium text-dark-medium">{{user.gender}}</td>
+                                            </tr>
+                                         
+                                            <tr>
+                                                <td>Role:</td>
+                                                <td class="font-medium text-dark-medium">{{user.role}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone:</td>
+                                                <td class="font-medium text-dark-medium">{{user.mobile}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>DOB:</td>
+                                                <td class="font-medium text-dark-medium">{{user.dob}}</td>
+                                            </tr>
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Student Details Area End Here -->
+           
+            </div>
+        </div>
+        <!-- Page Area End Here -->
+    </div>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <!-- Plugins js -->
+    <script src="/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Counterup Js -->
+    <script src="/js/jquery.counterup.min.js"></script>
+    <!-- Moment Js -->
+    <script src="/js/moment.min.js"></script>
+    <!-- Waypoints Js -->
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="/js/jquery.scrollUp.min.js"></script>
+    <!-- Full Calender Js -->
+    <script src="/js/fullcalendar.min.js"></script>
+    <!-- Chart Js -->
+    <script src="/js/Chart.min.js"></script>
+    <!-- Data Table Js -->
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <!-- Custom Js -->
+    <script src="/js/main.js"></script>
+
+     <script src="/scripts.js"></script>
+
+</body>
+
+</html>

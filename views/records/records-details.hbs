@@ -1,0 +1,480 @@
+
+
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AKKHOR | Students Details</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/fonts/flaticon.css">
+    <!-- Full Calender CSS -->
+    <link rel="stylesheet" href="/css/fullcalendar.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <!-- Data Table CSS -->
+    <link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Modernize js -->
+    <script src="/js/modernizr-3.6.0.min.js"></script>
+</head>
+
+ <style>
+    
+.errors {
+    background: #e79892;
+    padding: 5px;
+    margin-bottom: 10px;
+    min-width: 200px;
+    display: inline-block;
+    border: 1px solid #e74c3c;
+  }
+  
+  .errors ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .success {
+    background: #80cca0;
+    padding: 5px;
+    margin-bottom: 10px;
+    min-width: 200px;
+    display: inline-block;
+    border: 1px solid black;
+  }
+
+
+
+.form-div { margin-top: 100px; border: 1px solid #e0e0e0; }
+/*#profileDisplay { display: block; height: 210px; width: 60%; margin: 0px auto; border-radius: 50%; }*/
+
+ #profileDisplay{
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: block;
+  }
+
+
+
+.img-placeholder {
+  width: 100%;
+  color: white;
+  height: 70%;
+  background: black;
+  opacity: .7;
+  height: 150px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.img-placeholder h4 {
+  margin-top: 40%;
+  color: white;
+}
+.img-div:hover .img-placeholder {
+  display: block;
+  cursor: pointer;
+}
+
+
+
+
+
+</style>
+
+<body>
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+    <div id="wrapper" class="wrapper bg-ash">
+         <!-- Header Menu Area Start Here -->
+        <div class="navbar navbar-expand-md header-menu-one bg-light">
+            <div class="nav-bar-header-one">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="/img/logoX.png" alt="logo">
+                    </a>
+                </div>
+                  <div class="toggle-button sidebar-toggle">
+                    <button type="button" class="item-link">
+                        <span class="btn-icon-wrap">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="d-md-none mobile-nav-bar">
+               <button class="navbar-toggler pulse-animation" type="button" data-toggle="collapse" data-target="#mobile-navbar" aria-expanded="false">
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <button type="button" class="navbar-toggler sidebar-toggle-mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+           
+            </div>
+        </div>
+        <!-- Header Menu Area End Here -->
+        <!-- Page Area Start Here -->
+        <div class="dashboard-page-one">
+            <!-- Sidebar Area Start Here -->
+           <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
+               <div class="mobile-sidebar-header d-md-none">
+                    <div class="header-logo">
+                        <a href="#"><img src="/img/logo1.png" alt="logo"></a>
+                    </div>
+               </div>
+                <div class="sidebar-menu-content">
+                     <ul class="nav nav-sidebar-menu sidebar-toggle-view">
+                           <li class="nav-item">
+                            <a href="/records/dash" class="nav-link"><i
+                                class="flaticon-dashboard"></i><span>Dashboard</span></a>
+                        </li>
+
+                       <li class="nav-item">
+                            <a href="/records/profile" class="nav-link"><i
+                                class="flaticon-user"></i><span>Profile</span></a>
+                        </li>
+
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
+                            <ul class="nav sub-group-menu">
+                               
+                           
+                                <li class="nav-item">
+                                    <a href="/records/addStudent" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Add Student</a>
+                                </li>
+
+                                   <li class="nav-item">
+                                    <a href="/records/addClass" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Add Class</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="/records/studentList" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>View Students</a>
+                                </li>
+
+                                  <li class="nav-item">
+                                    <a href="/records/import" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Import Students</a>
+                                </li>
+
+   <li class="nav-item">
+                                    <a href="/records/studentSub" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Sync Subjects</a>
+                                </li>
+
+                                
+                            </ul>
+                        </li>
+
+
+                         <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i
+                                    class="flaticon-multiple-users-silhouette"></i><span>Teachers</span></a>
+                            <ul class="nav sub-group-menu">
+                              
+                                <li class="nav-item">
+                                    <a href="/records/addTeacher" class="nav-link"><i class="fas fa-angle-right"></i>Add
+                                        Teacher</a>
+                                </li>
+
+                                         <li class="nav-item">
+                                    <a href="/records/importTeacher" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Import Teacher</a>
+                                </li>
+
+                                          <li class="nav-item">
+                                    <a href="/records/teacherList" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>View Teachers</a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+
+
+
+  <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i
+                                    class="flaticon-menu-1"></i><span>Departments</span></a>
+                            <ul class="nav sub-group-menu">
+                              
+                                <li class="nav-item">
+                                    <a href="/records/dept" class="nav-link"><i class="fas fa-angle-right"></i>Add
+                                        Department</a>
+                                </li>
+
+                                         <li class="nav-item">
+                                    <a href="/records/deptList" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>View Departments</a>
+                                </li>
+
+                                        
+                               
+                            </ul>
+                        </li>
+
+
+
+
+
+                          <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-open-book"></i><span>Subjects</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a href="/records/subject" class="nav-link"><i class="fas fa-angle-right"></i>Add Subjects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/records/subjectList" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>View Subjects</a>
+                                </li>
+
+                                 <li class="nav-item">
+                                    <a href="/records/teacherSubject" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Allocate Subjects</a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+                    
+
+
+                         <li class="nav-item">
+                            <a href="/records/feesUpdate" class="nav-link"><i class="flaticon-calendar"></i><span>New Term Update</span></a>
+                        </li>
+                     
+                      <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-technological"></i><span>Class Routine</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a href="/records/lesson" class="nav-link"><i class="fas fa-angle-right"></i>Add Lesson</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/records/timetable" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Timetable</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="/records/addRoom" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Add ClassRoom</a>
+                                </li>
+
+                                 <li class="nav-item">
+                                    <a href="/records/roomList" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>View Classrooms</a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+                    
+ 
+                     
+                     
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-shopping-list"></i><span>Exam</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a href="/records/examSchedule" class="nav-link"><i class="fas fa-angle-right"></i>Add Exam</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="/records/examList" class="nav-link"><i class="fas fa-angle-right"></i>Exam Timetable</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/records/examGrade" class="nav-link"><i class="fas fa-angle-right"></i>Exam
+                                        Grades</a>
+                                </li>
+
+                                 <li class="nav-item">
+                                    <a href="/records/gradeList" class="nav-link"><i class="fas fa-angle-right"></i>View Exam
+                                        Grades</a>
+                                </li>
+                            </ul>
+                        </li>
+   
+                                    
+                         <li class="nav-item">
+                            <a href="/pass" class="nav-link"><i class="flaticon-settings"></i><span>Change Password</span></a>
+                        </li>
+
+                         <li class="nav-item sidebar-nav-item">
+                          
+                              <li class="nav-item">
+                            <a href="/logout" class="nav-link"><i class="flaticon-dashboard"></i><span>Logout</span></a>
+                        </li>
+                        </li>
+                      
+                      
+                    </ul>
+                </div>
+            </div>
+            <!-- Sidebar Area End Here -->
+            <div class="dashboard-content-one">
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                    <h3>Records</h3>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li> Details</li>
+                    </ul>
+                </div>
+                <!-- Breadcubs Area End Here -->
+                <!-- Student Table Area Start Here -->
+                <div class="card height-auto">
+                    <div class="card-body">
+                        <div class="heading-layout1">
+                            <div class="item-title">
+                                <h3>About Me</h3>
+                            </div>
+                           <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" 
+                                data-toggle="dropdown" aria-expanded="false">...</a>
+        
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-info-details">
+                            <div class="item-img">
+                               <!-- <img src="/uploads/{{user.photo}}" alt="teacher">-->
+                               	{{# if success }}
+    <section class="success">
+        <h2>Successful Validation!</h2>
+    </section>
+{{ else }}
+    {{# if errors }}
+        <section class="errors2">
+            <ul>
+                {{# each errors }}
+                    <li>{{ this.msg }}</li>
+                {{/each}}
+            </ul>
+        </section>
+
+        {{/if}}
+        {{#if message}}
+        <div  class="{{message.type}}">
+            <strong>{{message.intro}}</strong>{{message.message}}
+        </div>
+        {{/if}}
+   <!-- <img src="/img/{{bin.imagename}}" alt="" class="profile_image">-->
+	     <form action="/records/profile" method="POST" enctype="multipart/form-data">
+        <!--  <div class="custom-file mb-3">
+            <input type="file" name="file" id="file" class="custom-file-input">
+          <!--  <label for="file" class="custom-file-label"> </label>
+          </div>-->
+		       <div class="form-group " style="position: relative;" >
+            <span class="img-div">
+              <div class="text-center img-placeholder"  onClick="triggerClick()">
+                <h4>Update image</h4>
+              </div>
+              <img src="/uploads/{{pic}}" onClick="triggerClick()" id="profileDisplay">
+            </span>
+            <input type="file" name="file" onChange="displayImage(this)" id="profileImage" value="file" class="custom-file-input" style="display: none;">
+           
+          </div>
+		
+      
+         
+ <input type="submit" value="Update"  class="btn btn-dark">
+        </form>
+		{{/if}}
+                            </div>
+                            <div class="item-content">
+                                <div class="header-inline item-header">
+                                    <h3 class="text-dark-medium font-medium"></h3>
+                                    <div class="header-elements">
+                                        <ul>
+                                         
+                                        </ul>
+                                    </div>
+                                </div>
+                              
+                                <div class="info-table table-responsive">
+                                    <table class="table text-nowrap">
+                                        <tbody>
+                                            <tr>
+                                                <td>FullName:</td>
+                                                <td class="font-medium text-dark-medium">{{user.fullname}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gender:</td>
+                                                <td class="font-medium text-dark-medium">{{user.gender}}</td>
+                                            </tr>
+                                             <tr>
+                                                <td>Role:</td>
+                                                <td class="font-medium text-dark-medium">{{user.role}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>DOB:</td>
+                                                <td class="font-medium text-dark-medium">{{user.dob}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone Number:</td>
+                                                <td class="font-medium text-dark-medium">{{user.mobile}}</td>
+                                            </tr>
+                                           
+                                   
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Student Table Area End Here -->
+          
+            </div>
+        </div>
+        <!-- Page Area End Here -->
+    </div>
+    <!-- jquery-->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <!-- Plugins js -->
+    <script src="/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="/js/jquery.scrollUp.min.js"></script>
+    <!-- Custom Js -->
+    <script src="/js/main.js"></script>
+
+    <script src="/scripts.js"></script>
+
+</body>
+
+</html>
